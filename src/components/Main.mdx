@@ -1,7 +1,7 @@
 ---
 ---
 
-import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { Icon } from "astro-icon";
 
 # Miguel Velásquez
 
@@ -9,21 +9,21 @@ import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
 
 <div className='flex justify-center'>
   <a href='https://github.com/miguevelasquez1'>
-    <SiGithub
-      className='h-10 w-10 self-center m-0 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300'
-      title='Github'
+    <Icon
+      className='h-10 w-10 self-center m-0 cursor-pointer text-gray-400 p-2 text-2xl transition-colors hover:text-gray-300'
+      name='simple-icons:github'
     />
   </a>
   <a href='https://twitter.com/MiguelveDev'>
-    <SiTwitter
-      className='h-10 w-10 self-center m-0 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300'
-      title='Twitter'
+    <Icon
+      className='h-10 w-10 self-center m-0 cursor-pointer text-gray-400 p-2 text-2xl transition-colors hover:text-gray-300'
+      name='simple-icons:twitter'
     />
   </a>
   <a href='https://www.linkedin.com/in/miguevelasquez1/'>
-    <SiLinkedin
-      className='h-10 w-10 self-center m-0 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300'
-      title='LinkedIn'
+    <Icon
+      className='h-10 w-10 self-center m-0 cursor-pointer text-gray-400 p-2 text-2xl transition-colors hover:text-gray-300'
+      name='simple-icons:linkedin'
     />
   </a>
 </div>
