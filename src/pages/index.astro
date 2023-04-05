@@ -1,0 +1,51 @@
+---
+import { IoIosHome } from "react-icons/io";
+
+import Layout from '../layouts/Layout.astro';
+import Main from '../components/Main.mdx'
+import NavBar from '../components/NavBar.mdx'
+import AboutMe from '../components/AboutMe.mdx'
+import Experience from '../components/Experience.mdx'
+import Blog from '../components/Blog.mdx'
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="before:prose-code:content-none after:prose-code:content-none prose-code:bg-stone-700 prose-code:py-[0.2rem] prose-code:px-[0.3rem] prose-code:font-semibold prose-code:rounded">
+		<div id="home" class="flex h-screen w-full prose-h1:text-zinc-300">
+			<div class="flex w-full justify-center items-center fixed h-[3rem] gap-x-5 py-8 backdrop-blur-sm">
+				<div class="flex">
+					<a href="#home">
+					<IoIosHome className='h-10 w-10 self-center m-0 cursor-pointer fill-gray-200 p-2 text-2xl transition-colors hover:fill-gray-300' />
+	
+					</a>
+				</div>
+				<div class="flex text-gray-200 gap-x-5 text-center prose-p:font-semibold prose-p:decoration-wavy prose-p:underline prose-p:decoration-teal-400 hover:prose-a:text-gray-300">
+					<NavBar />
+				</div>
+			</div>
+			<div
+			class="flex flex-col w-full justify-center items-center min-h-screen prose prose-invert max-w-full prose-headings:m-0 prose-headings:cursor-default prose-p:m-2 prose-p:cursor-default prose-code:text-teal-400 text-center p-4">
+				<Main />
+			</div>
+		</div>
+		<div id="about-me" class="flex w-full py-32 prose-h1:text-zinc-300">
+			<div class="flex flex-col w-full items-center prose prose-invert max-w-full px-12 md:px-32 prose-p:mt-4 prose-p:mb-0 prose-code:text-stone-300">
+				<AboutMe />
+			</div>
+		</div>
+		<div id="experience" class="flex w-full py-32 prose-h1:text-zinc-300">
+			<div class="flex flex-col text-start w-full items-center prose prose-invert prose-h2:text-red-500 prose-h2:m-0 max-w-full px-12 md:px-48 prose-img:w-6 prose-img:mb-0 md:prose-img:w-8 prose-p:mt-0 prose-code:text-teal-400">
+				<Experience />
+			</div>
+		</div>
+		<div id="blog" class="flex w-full py-32 prose-h1:text-zinc-300">
+			<div class="flex flex-col w-full items-center prose prose-invert max-w-full p-8">
+				<Blog />
+			</div>
+		</div>
+	</div>
+	
+</Layout>
+
+<style>
+</style>
