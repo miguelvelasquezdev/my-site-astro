@@ -10,8 +10,8 @@ import { Icon } from "astro-icon";
 
 <Layout title="Miguel Velasquez Website">
 	<div class="before:prose-code:content-none after:prose-code:content-none prose-code:bg-stone-700 prose-code:py-[0.2rem] prose-code:px-[0.3rem] prose-code:font-semibold prose-code:rounded">
-		<div id="home" class="flex h-screen w-full prose-h1:text-zinc-300">
-			<div class="flex w-full justify-center items-center fixed h-[3rem] gap-x-5 py-8 backdrop-blur-sm">
+		<div id="home" class="flex flex-col h-screen w-full align-center justify-between prose-h1:text-zinc-300">
+			<div class="fixed flex w-full justify-center items-center  h-[3rem] gap-x-5 py-8 backdrop-blur-sm">
 				<div class="flex">
 					<a href="#home">
 						<Icon
@@ -25,8 +25,14 @@ import { Icon } from "astro-icon";
 				</div>
 			</div>
 			<div
-			class="flex flex-col w-full justify-center items-center min-h-screen prose prose-invert max-w-full prose-headings:m-0 hover:prose-a:animate-pulse prose-headings:cursor-default prose-p:m-2 prose-p:cursor-default prose-code:text-teal-400 text-center p-4">
+			class="flex flex-1 flex-col w-full justify-center items-center prose prose-invert max-w-full prose-headings:m-0 hover:prose-a:animate-pulse prose-headings:cursor-default prose-p:m-2 prose-p:cursor-default prose-code:text-teal-400 text-center p-4">
 				<Main />
+			</div>
+			<div class="flex flex-0 justify-center">
+				<Icon
+					className='h-14 w-14 self-center animate-bounce m-0 text-white p-2 text-2xl transition-colors cursor-default'
+					name='ic:round-arrow-circle-down'
+				/>
 			</div>
 		</div>
 		<div id="about-me" class="flex w-full py-32 prose-h1:text-zinc-300">
