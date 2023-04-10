@@ -2,12 +2,15 @@
 ---
 
 import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+
+import CalLogo from "../../assets/images/cal-logo-white.svg";
 
 # Miguel Velásquez
 
 `<Software Developer />`
 
-<div className='flex justify-center'>
+<div className='flex justify-center items-center'>
   <a href='https://github.com/miguevelasquez1'>
     <Icon
       className='h-10 w-10 self-center m-0 cursor-pointer text-gray-400 p-2 text-2xl transition-colors hover:text-gray-300'
@@ -25,5 +28,8 @@ import { Icon } from "astro-icon";
       className='h-10 w-10 self-center m-0 cursor-pointer text-gray-400 p-2 text-2xl transition-colors hover:text-gray-300'
       name='simple-icons:linkedin'
     />
+  </a>
+  <a href='https://cal.com/miguelvelasquez'>
+    <Image src={CalLogo} width={50} alt='Cal Icon' />
   </a>
 </div>
