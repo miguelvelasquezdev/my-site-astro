@@ -14,9 +14,9 @@ const description = "Hi, I am Miguel Velasquez and this is my website"
 <Layout {title} {description} >
 	<div class="before:prose-code:content-none after:prose-code:content-none prose-code:bg-stone-700 prose-code:py-[0.2rem] prose-code:px-[0.3rem] prose-code:font-semibold prose-code:rounded">
 		<div id="home" class="flex flex-col h-screen w-full align-center justify-between prose-h1:text-zinc-300">
-			<div class="fixed flex w-full justify-center items-center  h-[3rem] gap-x-5 py-8 backdrop-blur-sm">
+			<div class="fixed flex w-full justify-center items-center  h-[3rem] gap-x-5 py-8 backdrop-blur-sm z-10">
 				<div class="flex">
-					<a href="#home">
+					<a href="#home" aria-label="home">
 						<Icon
 						className='h-10 w-10 self-center m-0 cursor-pointer text-gray-200 p-2 text-2xl transition-colors hover:text-gray-300'
 						name='ic:round-home'
@@ -33,6 +33,7 @@ const description = "Hi, I am Miguel Velasquez and this is my website"
 			</div>
 			<a href="#about-me" class="flex flex-0 justify-center mb-14">
 				<Icon
+					aria-label="swipe down"
 					className='h-14 w-14 self-center animate-bounce m-0 text-white p-2 text-2xl transition-colors cursor-pointer'
 					name='ic:round-arrow-circle-down'
 				/>
