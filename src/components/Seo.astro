@@ -1,0 +1,32 @@
+---
+const { title, description, url = Astro.url, robots } = Astro.props;
+---
+
+<!-- SEO -->
+<link rel="canonical" href={url} />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="My Astro Blog" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content="../../assets/images/miguel-profile-image.jpg" />
+<meta property="og:image:url" content="../../assets/images/miguel-profile-image.jpg" />
+<meta
+  property="og:image:secure_url"
+  content="../../assets/images/miguel-profile-image.jpg"
+/>
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image:alt" content="Miguel Velasquez profile image" />
+
+<!-- Twitter -->
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="../../assets/images/miguel-profile-image.jpg" />
+<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:domain" content="https://twitter.com/MiguelveDev" />
+
+{robots && <meta name="robots" content="noindex, nofollow" />}

@@ -6,9 +6,12 @@ import AboutMe from '../components/AboutMe.mdx'
 import Experience from '../components/Experience.mdx'
 import Blog from '../components/Blog.mdx'
 import { Icon } from "astro-icon";
+
+const title = "Miguel Velasquez - Developer"
+const description = "Hi, I am Miguel Velasquez and this is my personal website"
 ---
 
-<Layout title="Miguel Velasquez Website">
+<Layout {title} {description} >
 	<div class="before:prose-code:content-none after:prose-code:content-none prose-code:bg-stone-700 prose-code:py-[0.2rem] prose-code:px-[0.3rem] prose-code:font-semibold prose-code:rounded">
 		<div id="home" class="flex flex-col h-screen w-full align-center justify-between prose-h1:text-zinc-300">
 			<div class="fixed flex w-full justify-center items-center  h-[3rem] gap-x-5 py-8 backdrop-blur-sm">
