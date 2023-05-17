@@ -2,10 +2,12 @@
 const { title, description, url = Astro.url, robots } = Astro.props;
 ---
 
-<title set:html={title} />
+
 
 <!-- SEO -->
 <link rel="canonical" href={url} />
+<title set:html={title} />
+<meta name="description" content={description} />
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="My Astro Blog" />
