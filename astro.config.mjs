@@ -2,11 +2,13 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
-
 import image from "@astrojs/image";
+
+import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://miguelvelasquez.dev",
   integrations: [
     mdx({
       syntaxHighlight: "shiki",
@@ -20,5 +22,6 @@ export default defineConfig({
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
+    robotsTxt(),
   ],
 });
