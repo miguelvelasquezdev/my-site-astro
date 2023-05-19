@@ -3,6 +3,7 @@ import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import image from "@astrojs/image";
+import sitemap from "@astrojs/sitemap";
 
 import robotsTxt from "astro-robots-txt";
 
@@ -22,6 +23,7 @@ export default defineConfig({
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
+    sitemap(),
     robotsTxt(),
   ],
 });
