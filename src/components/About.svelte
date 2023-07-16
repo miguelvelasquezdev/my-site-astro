@@ -5,7 +5,7 @@
     const codeStyle = "bg-zinc-800 py-[0.2rem] px-[0.3rem] before:content-none after:content-none font-semibold text-sm rounded"
 </script>
 
-<div class="h-full flex flex-col justify-center items-center px-28 gap-y-4 text-left">
+<div class="h-full flex flex-col justify-center items-center px-14 md:px-28 gap-y-4 text-left">
    <h1 class="font-bold text-4xl">About me</h1>
     <p>
         Hey! My name is Miguel Velásquez, and I am Software Developer.
