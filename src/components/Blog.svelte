@@ -1,0 +1,13 @@
+<script>
+    import '../styles/base.css'
+
+    const codeStyle = "bg-zinc-800 py-[0.2rem] px-[0.3rem] before:content-none after:content-none font-semibold text-sm rounded"
+</script>
+
+<div class="h-full flex flex-col justify-center items-center px-28 gap-y-4">
+   <h1 class="font-bold text-4xl">Blog</h1>
+   <div class="flex flex-col gap-y-4">
+      <p>There's nothing here so far, but I am writing interesting stuff that I learned on my way, and will be released soon...<br /> Meanwhile, visit my <a class="font-semibold underline" target="_blank" href="https://twitter.com/MiguelveDev">Twitter</a> or my <a class="font-semibold underline" target="_blank" href="https://github.com/miguevelasquez1">Github</a>, there you will find what I am learning and everything related to the Web technologies.</p>
+
+   </div>
+</div>

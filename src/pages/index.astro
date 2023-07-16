@@ -1,59 +1,48 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/BaseLayout.astro';
 import Main from '../components/Main.mdx'
 import NavBar from '../components/NavBar.mdx'
 import AboutMe from '../components/AboutMe.mdx'
 import Experience from '../components/Experience.mdx'
 import Blog from '../components/Blog.mdx'
 import { Icon } from "astro-icon";
+import Header from '../layouts/Header.astro';
 
 const title = "Miguel Velasquez - Developer"
 const description = "Hi, I am Miguel Velasquez and this is my website"
 ---
 
 <Layout {title} {description} >
-	<div class="before:prose-code:content-none after:prose-code:content-none prose-code:bg-stone-700 prose-code:py-[0.2rem] prose-code:px-[0.3rem] prose-code:font-semibold prose-code:rounded">
+	<div class="before:prose-code:content-none after:prose-code:content-none prose-code:bg-zinc-800 prose-code:py-[0.2rem] prose-code:px-[0.3rem] prose-code:font-semibold prose-code:rounded">
 		<div id="home" class="flex flex-col h-screen w-full align-center justify-between prose-h1:text-zinc-300">
-			<div class="fixed flex w-full justify-center items-center  h-[3rem] gap-x-5 py-8 backdrop-blur-sm z-10">
-				<div class="flex">
-					<a href="#home" aria-label="home">
-						<Icon
-						className='h-10 w-10 self-center m-0 cursor-pointer text-gray-200 p-2 text-2xl transition-colors hover:text-gray-300'
-						name='ic:round-home'
-					  />
-					</a>
-				</div>
-				<div class="flex text-gray-200 gap-x-5 text-center prose-p:font-semibold prose-p:decoration-wavy prose-p:underline prose-p:decoration-teal-400 hover:prose-a:text-gray-300">
-					<NavBar />
-				</div>
-			</div>
+			<Header />
 			<div
-			class="flex flex-1 flex-col w-full justify-center items-center prose prose-invert max-w-full prose-headings:m-0 hover:prose-a:animate-pulse prose-headings:cursor-default prose-p:m-2 prose-p:cursor-default prose-code:text-teal-400 p-4">
+			class="flex flex-1 flex-col w-full justify-center items-center prose prose-invert max-w-full prose-code:animate-pulse prose-headings:m-0 hover:prose-a:animate-pulse prose-headings:cursor-default prose-p:m-2 prose-p:cursor-default prose-code:text-teal-400 p-4">
 				<Main />
 			</div>
-			<a href="#about-me" class="flex flex-0 justify-center mb-14">
+			<!-- <a href="#about-me" class="flex flex-0 justify-center mb-14">
 				<Icon
 					aria-label="swipe down"
 					className='h-14 w-14 self-center animate-bounce m-0 text-white p-2 text-2xl transition-colors cursor-pointer'
 					name='ic:round-arrow-circle-down'
 				/>
-			</a>
+			</a> -->
 		</div>
-		<div id="about-me" class="flex w-full py-32 prose-h1:text-zinc-300">
+		<!-- <div id="about-me" class="flex w-full py-32 prose-h1:text-zinc-300">
 			<div class="flex flex-col w-full prose-headings:text-center prose prose-invert max-w-full px-12 prose-p:mt-4 prose-p:mb-0 prose-code:text-stone-300">
 				<AboutMe />
 			</div>
-		</div>
-		<div id="experience" class="flex w-full py-8 prose-h1:text-zinc-300">
+		</div> -->
+		<!-- <div id="experience" class="flex w-full py-8 prose-h1:text-zinc-300">
 			<div class="flex flex-col text-start w-full prose-headings:text-center hover:prose-a:animate-pulse prose-a:no-underline prose prose-invert prose-h2:text-red-500 prose-h2:m-0 prose-h2:mb-2 max-w-full px-12 prose-img:w-6 prose-img:mb-0 md:prose-img:w-8 prose-p:mt-0 prose-code:text-teal-400">
 				<Experience />
 			</div>
-		</div>
-		<div id="blog" class="flex w-full py-8 prose-h1:text-zinc-300">
+		</div> -->
+		<!-- <div id="blog" class="flex w-full py-8 prose-h1:text-zinc-300">
 			<div class="flex flex-col w-full prose-headings:text-center prose prose-invert max-w-full hover:prose-a:animate-pulse px-12">
 				<Blog />
 			</div>
-		</div>
+		</div> -->
 	</div>
 	
 </Layout>

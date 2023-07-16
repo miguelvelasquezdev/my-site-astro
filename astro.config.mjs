@@ -4,8 +4,9 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
-
 import robotsTxt from "astro-robots-txt";
+import vue from "@astrojs/vue";
+import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,16 +15,18 @@ export default defineConfig({
     mdx({
       syntaxHighlight: "shiki",
       shikiConfig: {
-        theme: "dracula",
+        theme: "dracula"
       },
-      gfm: false,
+      gfm: false
     }),
     tailwind(),
     react(),
     image({
-      serviceEntryPoint: "@astrojs/image/sharp",
+      serviceEntryPoint: "@astrojs/image/sharp"
     }),
     sitemap(),
     robotsTxt(),
-  ],
+    vue(),
+    svelte()
+  ]
 });
