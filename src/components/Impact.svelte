@@ -4,7 +4,7 @@
     const codeStyle = "bg-zinc-800 py-[0.2rem] px-[0.3rem] before:content-none after:content-none font-semibold text-sm rounded"
 </script>
 
-<div class="h-full sm:h-screen flex flex-col justify-center items-center px-12 md:px-28 gap-y-4 pt-24 md:pt-0">
+<div class="h-full sm:h-screen flex flex-col justify-center items-center px-12 md:px-28 gap-y-4 py-24 sm:pt-0">
    <h1 class="font-bold text-4xl">Impact</h1>
    <h2 class="font-semibold text-2xl text-center">Frontend Engineer at <span class="text-red-500 font-bold">Rappi</span></h2>
    <div class="flex flex-col gap-y-4">
