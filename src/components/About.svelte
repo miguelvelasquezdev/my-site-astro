@@ -13,20 +13,21 @@
     const codeStyle = "bg-zinc-800 py-[0.2rem] px-[0.3rem] before:content-none after:content-none font-semibold text-sm rounded"
 </script>
 
-<div class="h-full sm:h-screen flex flex-col justify-center items-center px-14 md:px-28 gap-y-4 text-left py-24 md:pt-0">
-   <h1 class="font-bold text-4xl">About me</h1>
-    <p>
-        Hi there! I am Miguel Velásquez and I am an autodidact Software Developer.
-    </p>
-    <p>
-        I am into the latest technologies and the OSS world. I am curious about <code class={codeStyle}>SSR</code>, <code class={codeStyle}>Edge Runtime ⚡️</code>, <code class={codeStyle}>Devops Workflows</code>, <code class={codeStyle}>How to reduce costs when the project scales 📈</code> and <code class={codeStyle}>Distributed Systems vs Monoliths 🥊</code>.
-    </p>
-    <p>
-        In my free time, I like to go to natural spaces 🍂🌞, do exercise, and enjoy the now.<br /> Also, I like to meet foreign people, btw I speak 3 idioms (Spanish, Portuguese, and English) and learning German. I like to know new cultures and be aware of social problems around the world.
-    </p>
-
-    <!-- <a href="#history" class="text-center text-zinc-700 animate-pulse cursor-pointer underline">More about me...</a> -->
-</div>
+<section class="h-full sm:h-screen flex flex-col justify-center items-center px-14 md:px-28 gap-y-4 text-left py-24 md:pt-0">
+    <h1 class="font-bold text-4xl">About me</h1>
+    <article class="flex flex-col gap-y-2">
+        <p>
+            Hi there! I am Miguel Velásquez and I am an autodidact Software Developer.
+        </p>
+        <p>
+            I am into the latest technologies and the OSS world. I am curious about <code class={codeStyle}>SSR</code>, <code class={codeStyle}>Edge Runtime ⚡️</code>, <code class={codeStyle}>Devops Workflows</code>, <code class={codeStyle}>How to reduce costs when the project scales 📈</code> and <code class={codeStyle}>Distributed Systems vs Monoliths 🥊</code>.
+        </p>
+        <p>
+            In my free time, I like to go to natural spaces 🍂🌞, do exercise, and enjoy the now.<br /> Also, I like to meet foreign people, btw I speak 3 idioms (Spanish, Portuguese, and English) and learning German. I like to know new cultures and be aware of social problems around the world.
+        </p>
+        <!-- <a href="#history" class="text-center text-zinc-700 animate-pulse cursor-pointer underline">More about me...</a> -->
+    </article>
+</section>
 
 <!-- <div class="relative flex flex-col items-center gap-y-4 px-14 md:px-28 py-24" id="history">
     <div class="absolute flex gap-x-8 md:gap-x-24">
