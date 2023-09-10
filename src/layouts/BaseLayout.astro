@@ -9,12 +9,22 @@ const { title, description, robots } = Astro.props;
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 	<head>
+		<!-- Google tag (gtag.js) -->
+	<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-M1J2RHYR0B"></script>
+	<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-M1J2RHYR0B');
+	</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
 		<meta name="generator" content={Astro.generator} />
 		<ViewTransitions />
 		<Seo {title} {description} {robots} />
+		
 	</head>
 	<body class="text-white bg-zinc-900">
 		<slot />
@@ -26,4 +36,3 @@ const { title, description, robots } = Astro.props;
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	}
 </style>
-<script defer src="/_vercel/insights/script.js"></script>
