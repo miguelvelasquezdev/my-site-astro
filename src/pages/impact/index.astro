@@ -1,8 +1,5 @@
 ---
-import Impact from '../../components/Impact.svelte'
-import Layout from '../../layouts/BaseLayout.astro';
-import NavBar from '../../components/NavBar.mdx'
-import { Icon } from 'astro-icon';
+import Impact from '../../components/Impact.astro'
 import Header from '../../layouts/Header.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = "Miguel Velasquez - Developer"
@@ -12,6 +9,6 @@ const description = "Hi, I am Miguel Velasquez and this is my website"
 <BaseLayout {title} {description}>
     <div class="min-h-screen w-screen">
         <Header />
-        <Impact client:visible />
+        <Impact />
     </div>
 </BaseLayout>

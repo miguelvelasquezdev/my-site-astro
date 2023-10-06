@@ -1,6 +1,6 @@
 ---
 title: 'Blog'
-import Blog from '../../components/Blog.svelte'
+import Blog from '../../components/Blog.astro'
 import Header from '../../layouts/Header.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { pageview } from '../../lib/gtag';
@@ -13,6 +13,6 @@ console.log(Astro.url.origin, 'url')
 <BaseLayout {title} {description}>
     <div class="h-screen w-screen">
         <Header />
-        <Blog client:visible />
+        <Blog />
     </div>
 </BaseLayout>
