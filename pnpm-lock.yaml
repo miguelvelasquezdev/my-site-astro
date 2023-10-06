@@ -26,9 +26,6 @@ dependencies:
   '@astrojs/vue':
     specifier: 3.0.0
     version: 3.0.0(@babel/core@7.22.15)(astro@3.0.8)(vite@4.4.9)(vue@3.3.4)
-  '@types/gtag.js':
-    specifier: 0.0.13
-    version: 0.0.13
   astro:
     specifier: ^3.0.8
     version: 3.0.8
@@ -1292,10 +1289,6 @@ packages:
 
   /@types/extend@3.0.1:
     resolution: {integrity: sha512-R1g/VyKFFI2HLC1QGAeTtCBWCo6n75l41OnsVYNbmKG+kempOESaodf6BeJyUM3Q0rKa/NQcTHbB2+66lNnxLw==}
-    dev: false
-
-  /@types/gtag.js@0.0.13:
-    resolution: {integrity: sha512-yOXFkfnt1DQr1v9B4ERulJOGnbdVqnPHV8NG4nkQhnu4qbrJecQ06DlaKmSjI3nzIwBj5U9/X61LY4sTc2KbaQ==}
     dev: false
 
   /@types/hast@2.3.4:
