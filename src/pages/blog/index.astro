@@ -3,11 +3,8 @@ title: 'Blog'
 import Blog from '../../components/Blog.astro'
 import Header from '../../layouts/Header.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { pageview } from '../../lib/gtag';
 const title = "Miguel Velasquez - Developer"
 const description = "Hi, I am Miguel Velasquez and this is my website"
-console.log(Astro.url.origin, 'url')
-// pageview(Astro.url.origin, Astro.props.title)
 ---
 
 <BaseLayout {title} {description}>
