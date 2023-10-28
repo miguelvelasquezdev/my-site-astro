@@ -1,15 +1,19 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import Main from '../components/Main.mdx'
-import NavBar from '../components/NavBar.mdx'
-import AboutMe from '../components/AboutMe.mdx'
-import Experience from '../components/Experience.mdx'
-import Blog from '../components/Blog.mdx'
-import { Icon } from "astro-icon";
 import Header from '../layouts/Header.astro';
 
 const title = "Miguel Velasquez - Developer"
 const description = "Hi, I am Miguel Velasquez and this is my website"
+
+const postHogPersonalApiKey = import.meta.env.POSTHOG_PERSONAL_API_KEY;
+
+const postHogEvents = await fetch('https://app.posthog.com/api/projects/38410/events', { headers: {
+	'Content-Type': 'application/json',
+	'Authorization': `Bearer ${postHogPersonalApiKey}`
+} }).then(res => res.json()) as { results: { event: '$pageleave' | '$pageview' }[] }
+
+const pageViews = postHogEvents.results.filter(result => result.event === '$pageview').length;
 ---
 
 <Layout {title} {description} >
@@ -18,7 +22,7 @@ const description = "Hi, I am Miguel Velasquez and this is my website"
 			<Header />
 			<div
 			class="flex flex-1 flex-col w-full justify-center items-center prose prose-invert max-w-full prose-code:animate-pulse prose-headings:m-0 hover:prose-a:animate-pulse prose-headings:cursor-default prose-p:m-2 prose-p:cursor-default prose-code:text-teal-400 p-4">
-				<Main />
+			<Main />
 			</div>
 			<!-- <a href="#about-me" class="flex flex-0 justify-center mb-14">
 				<Icon

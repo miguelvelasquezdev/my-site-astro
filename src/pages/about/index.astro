@@ -1,8 +1,5 @@
 ---
 import About from '../../components/About.astro'
-import Layout from '../../layouts/BaseLayout.astro';
-import NavBar from '../../components/NavBar.mdx'
-import { Icon } from 'astro-icon';
 import Header from '../../layouts/Header.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = "Miguel Velasquez - Developer"
@@ -10,7 +7,7 @@ const description = "Hi, I am Miguel Velasquez and this is my website"
 ---
 
 <BaseLayout {title} {description}>
-    <div class="h-screen w-screen">
+    <div class="h-screen">
         <Header />
         <About />
     </div>

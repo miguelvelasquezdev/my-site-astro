@@ -20,13 +20,13 @@ const { title, description, robots } = Astro.props;
 			posthog.init('phc_1t30sgscrCzFAMkYj4RCJZqoVB3Z2zwtjtGz4OjzvIN',{api_host:'https://app.posthog.com'})
 		</script>
 	</head>
-	<body class="text-white bg-zinc-900">
+	<body class="text-white bg-zinc-900 max-w-2xl m-auto px-6">
 		<slot />
 	</body>
 </html>
+
 <style is:global>
-	html {
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	body {
+		font-family: "Inter", -apple-system, sans-serif;
 	}
 </style>
