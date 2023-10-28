@@ -13,7 +13,8 @@ const postHogEvents = await fetch('https://app.posthog.com/api/projects/38410/ev
 	'Authorization': `Bearer ${postHogPersonalApiKey}`
 } }).then(res => res.json()) as { results: { event: '$pageleave' | '$pageview' }[] }
 
-const pageViews = postHogEvents.results.filter(result => result.event === '$pageview').length;
+const pageViews = postHogEvents?.results?.filter(result => result.event === '$pageview')?.length;
+console.log(pageViews, 'pageViews')
 ---
 
 <Layout {title} {description} >

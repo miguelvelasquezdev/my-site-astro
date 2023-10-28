@@ -4,7 +4,6 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
-import vue from "@astrojs/vue";
 import svelte from "@astrojs/svelte";
 import solidJs from "@astrojs/solid-js";
 import partytown from "@astrojs/partytown";
@@ -30,7 +29,6 @@ export default defineConfig({
     react(),
     sitemap(),
     robotsTxt(),
-    vue(),
     svelte(),
     solidJs(),
   ],
