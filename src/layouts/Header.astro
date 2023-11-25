@@ -1,16 +1,19 @@
 ---
-import { Icon } from "astro-icon";
 import NavBar from '../components/NavBar.mdx'
-
+import Theme from '../components/Theme'
 ---
 
-<div class="fixed flex w-full items-center  h-[3rem] gap-x-5 py-8 backdrop-blur-sm z-10">
+<div class="fixed flex w-full items-center max-w-2xl m-auto h-[3rem] gap-x-5 py-8 backdrop-blur-sm z-10">
     <div class="flex">
         <a href="/" aria-label="home">
           <span class="text-xl">MV</span>
         </a>
     </div>
-    <div class="flex text-gray-200 gap-x-5 text-center hover:prose-a:text-gray-300">
+    <div class="flex w-full text-gray-200 gap-x-5 text-center hover:prose-a:text-gray-300">
         <NavBar />
     </div>
+    <div class="flex text-gray-200">
+        <Theme client:only="solid-js" />
+    </div>
+
 </div>

@@ -1,53 +1,78 @@
 ---
-import Layout from '../layouts/BaseLayout.astro';
-import Main from '../components/Main.mdx'
-import Header from '../layouts/Header.astro';
+import { Icon } from "astro-icon";
 
-const title = "Miguel Velasquez - Developer"
-const description = "Hi, I am Miguel Velasquez and this is my website"
+import Layout from "../layouts/BaseLayout.astro";
+import Main from "../components/Main.mdx";
+import Header from "../layouts/Header.astro";
+
+const title = "Miguel Velasquez - Developer";
+const description = "Hi, I am Miguel Velasquez and this is my website";
 
 const postHogPersonalApiKey = import.meta.env.POSTHOG_PERSONAL_API_KEY;
 
-const postHogEvents = await fetch('https://app.posthog.com/api/projects/38410/events', { headers: {
-	'Content-Type': 'application/json',
-	'Authorization': `Bearer ${postHogPersonalApiKey}`
-} }).then(res => res.json()) as { results: { event: '$pageleave' | '$pageview' }[] }
+const postHogEvents = (await fetch(
+  "https://app.posthog.com/api/projects/38410/events",
+  {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${postHogPersonalApiKey}`,
+    },
+  },
+).then((res) => res.json())) as {
+  results: { event: "$pageleave" | "$pageview" }[];
+};
 
-const pageViews = postHogEvents?.results?.filter(result => result.event === '$pageview')?.length;
-console.log(pageViews, 'pageViews')
+const pageViews = postHogEvents?.results?.filter(
+  (result) => result.event === "$pageview",
+)?.length;
+console.log(pageViews, "pageViews");
 ---
 
-<Layout {title} {description} >
-	<div class="before:prose-code:content-none after:prose-code:content-none prose-code:bg-zinc-800 prose-code:py-[0.2rem] prose-code:px-[0.3rem] prose-code:font-semibold prose-code:rounded">
-		<div id="home" class="flex flex-col h-screen w-full align-center justify-between prose-h1:text-zinc-300">
-			<Header />
-			<div
-			class="flex flex-1 flex-col w-full justify-center items-center text-center prose prose-invert max-w-full prose-code:animate-pulse prose-headings:m-0 hover:prose-a:animate-pulse prose-headings:cursor-default prose-p:m-2 prose-p:cursor-default prose-code:text-teal-400 p-4">
-			<Main />
-			</div>
-			<!-- <a href="#about-me" class="flex flex-0 justify-center mb-14">
-				<Icon
-					aria-label="swipe down"
-					className='h-14 w-14 self-center animate-bounce m-0 text-white p-2 text-2xl transition-colors cursor-pointer'
-					name='ic:round-arrow-circle-down'
-				/>
-			</a> -->
-		</div>
-		<!-- <div id="about-me" class="flex w-full py-32 prose-h1:text-zinc-300">
-			<div class="flex flex-col w-full prose-headings:text-center prose prose-invert max-w-full px-12 prose-p:mt-4 prose-p:mb-0 prose-code:text-stone-300">
-				<AboutMe />
-			</div>
-		</div> -->
-		<!-- <div id="experience" class="flex w-full py-8 prose-h1:text-zinc-300">
-			<div class="flex flex-col text-start w-full prose-headings:text-center hover:prose-a:animate-pulse prose-a:no-underline prose prose-invert prose-h2:text-red-500 prose-h2:m-0 prose-h2:mb-2 max-w-full px-12 prose-img:w-6 prose-img:mb-0 md:prose-img:w-8 prose-p:mt-0 prose-code:text-teal-400">
-				<Experience />
-			</div>
-		</div> -->
-		<!-- <div id="blog" class="flex w-full py-8 prose-h1:text-zinc-300">
-			<div class="flex flex-col w-full prose-headings:text-center prose prose-invert max-w-full hover:prose-a:animate-pulse px-12">
-				<Blog />
-			</div>
-		</div> -->
-	</div>
-	
+<Layout {title} {description}>
+  <div
+    class="prose-code:rounded prose-code:bg-zinc-800 prose-code:px-[0.3rem] prose-code:py-[0.2rem] prose-code:font-semibold before:prose-code:content-none after:prose-code:content-none"
+  >
+    <div
+      id="home"
+      class="align-center flex h-screen w-full flex-col justify-between prose-h1:text-zinc-300"
+    >
+      <Header />
+      <div
+        class="prose prose-invert flex w-full max-w-full flex-1 flex-col items-center justify-center p-4 text-center prose-headings:m-0 prose-headings:cursor-default prose-p:m-2 prose-p:cursor-default hover:prose-a:animate-pulse prose-code:animate-pulse prose-code:text-teal-400"
+      >
+        <Main />
+        <form
+          hx-post="/prompt"
+          hx-target="#result"
+          class="mt-8 flex flex-col justify-center gap-2"
+        >
+          <div class="whitespace-nowrap">
+            Ask to Chat GPT something about Miguel or his website
+          </div>
+          <div
+            class="flex h-full justify-between gap-2 rounded-2xl border border-gray-500 p-2"
+          >
+            <input
+              type="text"
+              name="prompt"
+              placeholder="What are Miguel's favorite hobbies?"
+              class="w-full bg-transparent outline-none"
+            />
+            <button
+              type="submit"
+              class="h-full rounded-lg bg-gray-700 px-2 py-2 text-xl font-bold text-white hover:bg-gray-600"
+            >
+              <Icon
+                name="heroicons-solid:arrow-sm-up"
+                class="h-4 w-4 text-white"
+              />
+            </button>
+          </div>
+        </form>
+        <div class="mt-5 p-5">
+          <div id="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
